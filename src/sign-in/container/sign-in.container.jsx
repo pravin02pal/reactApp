@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { SignUpActions } from '../action/sign-up.actions'
-import SignUpForm from '../component/sign-up.component.jsx'
+import { authActions } from '../action/auth.actions'
+import SignInForm from '../component/sign-in.component.jsx'
 
-class SignUp extends Component {
+class SignIn extends Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -11,13 +11,13 @@ class SignUp extends Component {
 
   handleSubmit(data) {
     this.props.dispatch(SignUpActions.signUp(data));
-    this.props.router.push('/signin');
+    this.props.router.push('/login');
   }
 
   render() {
     return (
       <div>
-        <SignUpForm submit={this.handleSubmit}/>
+        <SignInForm submit={this.handleSubmit}/>
       </div>
     )
   }
@@ -30,4 +30,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(SignUp)
+export default connect(mapStateToProps)(SignIn)

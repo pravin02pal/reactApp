@@ -15,7 +15,7 @@ class Main extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullRight>
-              <LinkContainer to="/login">
+              <LinkContainer to="/signin">
 				<NavItem>Login</NavItem>
 			  </LinkContainer>
 			  <LinkContainer to="/signup">

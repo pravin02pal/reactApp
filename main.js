@@ -4,7 +4,7 @@ import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 
 import App from './App.jsx';
-import { authReducer } from './src/login/reducer/auth.reducer';
+import { authReducer } from './src/sign-in/reducer/auth.reducer';
 import { signUpReducer } from './src/sign-up/reducer/sign-up.reducer';
 
 const eSchoolApp = combineReducers({

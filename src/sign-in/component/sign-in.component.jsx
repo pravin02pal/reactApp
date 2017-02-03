@@ -3,7 +3,6 @@ import React, { PropTypes, Component } from 'react'
 class SignInForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {name:'',email:'',password:''};
     this.handleClick = this.handleClick.bind(this);
   }
   

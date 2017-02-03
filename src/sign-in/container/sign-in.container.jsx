@@ -10,8 +10,8 @@ class SignIn extends Component {
   }
 
   handleSubmit(data) {
-    this.props.dispatch(SignUpActions.signUp(data));
-    this.props.router.push('/login');
+    this.props.dispatch(authActions.signIn(data));
+    this.props.router.push('/');
   }
 
   render() {

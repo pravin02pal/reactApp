@@ -1,12 +1,12 @@
 import { authConstants } from './auth.constants';
 
-export const AuthActions = {
-  login
+export const authActions = {
+  signIn
 }
 
-function login(user) {
+function signIn(user) {
   return {
-    type: authConstants.LOGIN,
+    type: authConstants.SIGN_IN,
     payload: user
   };
 }

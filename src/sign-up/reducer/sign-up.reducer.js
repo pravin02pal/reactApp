@@ -1,13 +1,13 @@
 import { signUpConstants } from '../action/sign-up.constants';
 
 const DEFAULT_STATE = {
-  users: []
+  users: {}
 }
 
 export const signUpReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case signUpConstants.SIGNUP:
-      state.users.push(action.payload);
+      state.users[action.payload.email] = action.payload;
       return state;
     default:
       return state;

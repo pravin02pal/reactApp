@@ -1,3 +1,3 @@
-Technology: ReactJS, webpack..
-Install Dependency: npm install  
+Technology: ReactJS, webpack and Redux  
+Install Dependency: npm install   
 Start point: npm start  

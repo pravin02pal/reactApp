@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { authActions } from '../action/auth.actions'
-import SignInForm from '../component/sign-in.component.jsx'
+import SignInForm from '../component/auth.component.jsx'
 
-class SignIn extends Component {
+class Auth extends Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,4 +29,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(SignIn)
+export default connect(mapStateToProps)(Auth)

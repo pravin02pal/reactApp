@@ -1,5 +1,0 @@
-export const authConstants = {
-  SIGN_IN: 'AUTH.SIGN_IN',
-  INVALID_USER: 'USER.INVALID',
-  SIGN_IN_SUCCESSFULL: 'SIGN_IN.SUCCESSFULL'
-}

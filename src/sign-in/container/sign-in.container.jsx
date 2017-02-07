@@ -24,7 +24,6 @@ class SignIn extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log("this", state)
   return {
     
   }

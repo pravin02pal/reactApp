@@ -18,6 +18,13 @@ export const authReducer = (state = DEFAULT_STATE, action) => {
     case authConstants.SIGN_IN_SUCCESSFULL:
       state.user = action.payload;
       state.invalidUser = false;
+      state.isAdmin = false;
+      state.isLoggedIn = true;
+      return state;
+    case authConstants.ADMIN_SIGNED_IN:
+      state.user = action.payload;
+      state.invalidUser = false;
+      state.isAdmin = true;
       state.isLoggedIn = true;
       return state;
     default:

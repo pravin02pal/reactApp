@@ -11,9 +11,10 @@ export const authMiddleware = store => next => action => {
   
   function signInUser(user, action) {
     if (user && user.password == action.payload.password) {
-      return {type: authConstants.SIGN_IN_SUCCESSFULL, payload: action.payload};
+      action = user.name == 'Admin' ? {type: authConstants.ADMIN_SIGNED_IN, payload: action.payload} : {type: authConstants.SIGN_IN_SUCCESSFULL, payload: action.payload};
     } else {
-      return {type: authConstants.INVALID_USER, payload: action.payload};
+      action = {type: authConstants.INVALID_USER, payload: action.payload};
     }
+    return action;
   }
 }

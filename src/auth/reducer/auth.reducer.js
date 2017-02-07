@@ -27,6 +27,12 @@ export const authReducer = (state = DEFAULT_STATE, action) => {
       state.isAdmin = true;
       state.isLoggedIn = true;
       return state;
+    case authConstants.SIGN_OUT:
+      state.user = {};
+      state.invalidUser = false;
+      state.isAdmin = false;
+      state.isLoggedIn = false;
+      return state;
     default:
       return state;
   }

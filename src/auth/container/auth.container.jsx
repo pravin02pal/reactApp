@@ -7,11 +7,23 @@ class Auth extends Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.signOut = this.signOut.bind(this);
+  }
+  
+  signOut(data) {
+    this.props.dispatch(authActions.signOut());
+    this.props.router.push('/');
   }
 
   handleSubmit(data) {
     this.props.dispatch(authActions.signIn(data));
     this.props.router.push('/');
+  }
+  
+  componentWillMount() {
+    if (this.props.location.pathname == '/signout') {
+      this.signOut();
+    }
   }
 
   render() {

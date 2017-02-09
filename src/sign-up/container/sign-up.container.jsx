@@ -11,13 +11,14 @@ class SignUp extends Component {
 
   handleSubmit(data) {
     this.props.dispatch(SignUpActions.signUp(data));
-    this.props.router.push('/signin');
+    let route = this.props.isLoggedIn ? '/' : '/signin';
+    this.props.router.push(route);
   }
 
   render() {
     return (
       <div>
-        <SignUpForm submit={this.handleSubmit}/>
+        <SignUpForm submit={this.handleSubmit} isLoggedIn={this.props.isLoggedIn}/>
       </div>
     )
   }
@@ -25,7 +26,7 @@ class SignUp extends Component {
 
 const mapStateToProps = state => {
   return {
-
+    isLoggedIn: state.authReducer.isLoggedIn
   }
 }
 

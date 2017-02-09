@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
 import Main from './src/common/main.component.jsx'
-import Home from './src/common/home.component.jsx'
+import Home from './src/home/container/home.container.jsx'
 import SignUp from './src/sign-up/container/sign-up.container.jsx'
 import Auth from './src/auth/container/auth.container.jsx'
 

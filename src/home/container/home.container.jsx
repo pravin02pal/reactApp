@@ -13,7 +13,7 @@ class Home extends Component {
         
     if (this.props.isLoggedIn) {
       Object.keys(this.props.users).map((key) => {
-	users.push(<User key={key} user={this.props.users[key]} />);
+	users.push(<User key={key} user={this.props.users[key]} isAdmin={this.props.isAdmin} />);
       });
 
       return content = <table className="table table-striped">
@@ -21,7 +21,7 @@ class Home extends Component {
 	  <tr>
 	    <th>Name</th>
 	    <th>Email</th>
-	    <th>Action</th>
+	    {this.props.isAdmin && <th>Action</th>}
 	  </tr>
 	</thead>
 	<tbody>{users}</tbody>
@@ -39,7 +39,8 @@ class Home extends Component {
 const mapStateToProps = (state, ownProps) => {
   return {
     users: state.signUpReducer.users,
-    isLoggedIn: state.authReducer.isLoggedIn
+    isLoggedIn: state.authReducer.isLoggedIn,
+    isAdmin: state.authReducer.isAdmin
   }
 }
 

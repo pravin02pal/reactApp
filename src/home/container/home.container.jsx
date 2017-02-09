@@ -13,7 +13,7 @@ class Home extends Component {
         
     if (this.props.isLoggedIn) {
       Object.keys(this.props.users).map((key) => {
-	users.push(<User user={this.props.users[key]} />);
+	users.push(<User key={key} user={this.props.users[key]} />);
       });
 
       return content = <table className="table table-striped">

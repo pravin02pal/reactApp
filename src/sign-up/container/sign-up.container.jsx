@@ -18,7 +18,11 @@ class SignUp extends Component {
   render() {
     return (
       <div>
-        <SignUpForm submit={this.handleSubmit} isLoggedIn={this.props.isLoggedIn} user={this.props.user} location={this.props.location}/>
+        <SignUpForm 
+	  submit={this.handleSubmit} 
+	  isLoggedIn={this.props.isLoggedIn}
+	  user={this.props.user} 
+	  location={this.props.location}/>
       </div>
     )
   }

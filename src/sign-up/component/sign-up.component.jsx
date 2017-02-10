@@ -28,9 +28,9 @@ class SignUpForm extends Component {
 	  <h2 className="form-signin-heading">{lable.headingLable}</h2>
 	  <input type="text" value={this.state.name} onChange={e => this.setState({ name: e.target.value })} className="form-control" name="name" placeholder="User name" required="" />
 	  <input type="email" value={this.state.email} onChange={e => this.setState({ email: e.target.value })} className="form-control" name="email" placeholder="Email Address" required="" />
-	  <input type="password" onChange={e => this.setState({ password: e.target.value })} className="form-control" name="password" placeholder="Password" required=""/>
+	  <input type="password" value={this.state.password} onChange={e => this.setState({ password: e.target.value })} className="form-control" name="password" placeholder="Password" required=""/>
 	</form>
-	<button className="btn btn-lg btn-primary btn-block" onClick={this.handleClick} type="submit">{lable.buttonLable}</button>
+	<button className="btn btn-lg btn-primary btn-block" disabled={this.state.name.trim() == "" || this.state.email.trim() == "" || this.state.password.trim() == ""} onClick={this.handleClick} type="submit">{lable.buttonLable}</button>
       </div>
     );
   }

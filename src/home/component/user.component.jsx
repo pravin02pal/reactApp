@@ -8,7 +8,7 @@ class User extends Component {
       <tr>
 	{<td>{this.props.user.name}</td>}
 	<td>{this.props.user.email}</td>
-	{this.props.isAdmin && <td><Link to={`/user/${this.props.user.email}`}><FaEdit/></Link></td>}
+	<td>{this.props.user.name != 'Admin' && <Link to={`/user/${this.props.user.email}`}><FaEdit/></Link>}</td>
       </tr>
     )
   }

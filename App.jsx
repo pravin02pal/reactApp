@@ -14,6 +14,7 @@ class App extends React.Component {
           <Route path="/signin" component={Auth}/>
           <Route path="/signup" component={SignUp}/>
           <Route path="/signout" component={Auth}/>
+          <Route path="/user/:userEmail" component={SignUp}/>
         </Route>
       </Router>
     );

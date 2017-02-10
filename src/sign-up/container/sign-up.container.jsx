@@ -18,15 +18,16 @@ class SignUp extends Component {
   render() {
     return (
       <div>
-        <SignUpForm submit={this.handleSubmit} isLoggedIn={this.props.isLoggedIn}/>
+        <SignUpForm submit={this.handleSubmit} isLoggedIn={this.props.isLoggedIn} user={this.props.user} location={this.props.location}/>
       </div>
     )
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   return {
-    isLoggedIn: state.authReducer.isLoggedIn
+    isLoggedIn: state.authReducer.isLoggedIn,
+    user:  state.signUpReducer.users[ownProps.params.userEmail]
   }
 }
 

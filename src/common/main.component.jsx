@@ -6,7 +6,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.handleLink = this.handleLink.bind(this);
+    this.handleLink = this.handleLink.bind(this)
   }
   
   handleLink() {
